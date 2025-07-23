@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dinajpur Handicrafts BD</title>
+    <meta name="description" content="Discover our story, meet our artisans, and learn about our traditional crafting process at Dinajpur Handicrafts BD.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .history-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(146, 64, 14, 0.05);
+            z-index: -1;
+        }
+        .artisan-card {
+            transition: all 0.3s ease;
+        }
+        .artisan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(146, 64, 14, 0.2);
+        }
+        .process-step {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .process-step::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: #b45309;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .step-1::before { content: "1"; }
+        .step-2::before { content: "2"; }
+        .step-3::before { content: "3"; }
+        .step-4::before { content: "4"; }
+        .step-5::before { content: "5"; }
+        .values-card {
+            transition: all 0.3s ease;
+        }
+        .values-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(146, 64, 14, 0.1);
+        }
+        .timeline {
+            position: relative;
+        }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 2.25rem;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #b45309;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 4rem;
+            margin-bottom: 3rem;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 2rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid #b45309;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .scroll-top.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+
+
+    <!-- Navbar -->
+    <nav class="bg-amber-800 text-white p-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold flex items-center">
+                <i class="fas fa-hands mr-2"></i> Dinajpur Handicrafts BD
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-amber-200 font-medium">Home</a>
+                <a href="products.html" class="hover:text-amber-200 font-medium">Products</a>
+                <a href="about.html" class="text-amber-300 font-medium border-b-2 border-amber-300">About</a>
+                <a href="gallery.html" class="hover:text-amber-200 font-medium">Gallery</a>
+                <a href="contact.html" class="hover:text-amber-200 font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-700">
+            <div class="container mx-auto flex flex-col space-y-2 py-2">
+                <a href="index.html" class="px-4 py-2 hover:bg-amber-600">Home</a>
+                <a href="products.html" class="px-4 py-2 hover:bg-amber-600">Products</a>
+                <a href="about.html" class="px-4 py-2 bg-amber-600">About</a>
+                <a href="gallery.html" class="px-4 py-2 hover:bg-amber-600">Gallery</a>
+                <a href="contact.html" class="px-4 py-2 hover:bg-amber-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Info Bar -->
+    <div class="bg-amber-900 text-white py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Nationwide Delivery
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Secure Payment Options
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                    </svg>
+                    Custom Orders Available
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Preserving Tradition Through Craft</h1>
+            <p class="text-xl text-amber-100 max-w-3xl mx-auto">
+                Discover our journey, meet our artisans, and learn about the traditional techniques that define our craft.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 relative history-section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">Our Humble Beginnings</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <p class="text-amber-700 mb-4">
+                          Established in 2025, Dinajpur Handicrafts is a new chapter in a long-standing tradition of Bangladeshi craftsmanship. What began as a passion project among local artisans has quickly grown into a creative collective dedicated to preserving and reimagining heritage crafts like jute, bamboo, macramé, and more.
+
+Inspired by generations of artistry in rural Dinajpur, our founder Abdul Karim launched this initiative to revive fading techniques passed down through families. His vision: to blend timeless craftsmanship with modern design to meet today’s global demand for sustainable, handmade products.
+
+Every piece we create carries the soul of our community — rooted in history, crafted with care, and made for the contemporary world.
+                        </p>
+                      
+                    </div>
+                    
+                    <!-- Timeline -->
+                    <div class="mt-12 timeline">
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-amber-800 mb-2">2025 – The Foundation</h3>
+                            <p class="text-amber-700">We begin our journey with a small group of skilled artisans from Dinajpur, focusing on quality, honesty, and sustainable production.</p>
+                        </div>
+                        <!-- <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-amber-800 mb-2">2013 - First Export</h3>
+                            <p class="text-amber-700">Shipped our first international order to Japan</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-amber-800 mb-2">2016 - Workshop Expansion</h3>
+                            <p class="text-amber-700">Moved to a larger facility to accommodate growing team</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-amber-800 mb-2">2020 - Artisan Training Program</h3>
+                            <p class="text-amber-700">Launched initiative to train next generation of craftspeople</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-xl font-bold text-amber-800 mb-2">Present Day</h3>
+                            <p class="text-amber-700">50+ artisans creating for clients worldwide</p>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Original Workshop" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg mt-10">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Current Workshop" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Artisans at Work" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-lg -mt-10">
+                            <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Crafting Process" class="w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-16 bg-amber-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">Our Mission & Values</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="values-card bg-white p-8 rounded-xl shadow text-center">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-3">Preserve Tradition</h3>
+                    <p class="text-amber-700">Safeguard centuries-old crafting techniques passed down through generations.</p>
+                </div>
+                
+                <div class="values-card bg-white p-8 rounded-xl shadow text-center">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-3">Sustainable Practices</h3>
+                    <p class="text-amber-700">Use eco-friendly materials and processes that respect our environment.</p>
+                </div>
+                
+                <div class="values-card bg-white p-8 rounded-xl shadow text-center">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-3">Empower Artisans</h3>
+                    <p class="text-amber-700">Provide fair wages and opportunities for rural craftspeople.</p>
+                </div>
+                
+                <div class="values-card bg-white p-8 rounded-xl shadow text-center">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-3">Quality Craftsmanship</h3>
+                    <p class="text-amber-700">Maintain exceptional standards in every piece we create.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Artisans -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">Meet Our Master Artisans</h2>
+                <p class="text-amber-700 max-w-3xl mx-auto">
+                    Behind every beautiful piece are the skilled hands and passionate hearts of our artisans.
+                </p>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="artisan-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Artisan" class="w-full h-72 object-cover">
+                        <span class="absolute bottom-4 left-4 bg-amber-700 text-white px-3 py-1 rounded-full text-sm">
+                            Bamboo Specialist
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-1">Abdul Rahman</h3>
+                        <p class="text-amber-600 mb-4">28 years experience</p>
+                        <p class="text-amber-700 mb-4 italic">"I've been weaving bamboo since I was 12, learning from my father. Each piece carries our family's tradition."</p>
+                        <div class="flex items-center text-amber-700">
+                            <i class="fas fa-award mr-2 text-amber-600"></i>
+                            National Craftsmanship Award 2018
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="artisan-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Artisan" class="w-full h-72 object-cover">
+                        <span class="absolute bottom-4 left-4 bg-amber-700 text-white px-3 py-1 rounded-full text-sm">
+                            Macrame Artist
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-1">Fatima Begum</h3>
+                        <p class="text-amber-600 mb-4">15 years experience</p>
+                        <p class="text-amber-700 mb-4 italic">"Each knot tells a story. I create macrame pieces that bring warmth and texture to modern spaces."</p>
+                        <div class="flex items-center text-amber-700">
+                            <i class="fas fa-award mr-2 text-amber-600"></i>
+                            Featured in Traditional Arts Journal
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="artisan-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Artisan" class="w-full h-72 object-cover">
+                        <span class="absolute bottom-4 left-4 bg-amber-700 text-white px-3 py-1 rounded-full text-sm">
+                            Gypsum Master
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-1">Karim Uddin</h3>
+                        <p class="text-amber-600 mb-4">22 years experience</p>
+                        <p class="text-amber-700 mb-4 italic">"Working with gypsum allows me to create intricate designs that capture our cultural heritage."</p>
+                        <div class="flex items-center text-amber-700">
+                            <i class="fas fa-award mr-2 text-amber-600"></i>
+                            Trained 15 apprentices
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="gallery.html" class="inline-flex items-center bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                    <i class="fas fa-images mr-2"></i> Visit Our Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Making Process -->
+    <section class="py-16 bg-amber-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">The Crafting Process</h2>
+                <p class="text-amber-200 max-w-3xl mx-auto">
+                    Each piece undergoes a meticulous creation process that combines traditional techniques with skilled craftsmanship.
+                </p>
+                <div class="w-24 h-1 bg-amber-300 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <div class="space-y-8">
+                        <div class="process-step step-1">
+                            <h3 class="text-xl font-bold mb-3">Material Selection</h3>
+                            <p class="text-amber-200">We source sustainable bamboo, jute, and other natural materials from local suppliers who practice responsible harvesting.</p>
+                        </div>
+                        
+                        <div class="process-step step-2">
+                            <h3 class="text-xl font-bold mb-3">Preparation & Treatment</h3>
+                            <p class="text-amber-200">Materials are carefully cleaned, treated, and prepared using traditional methods to ensure durability and quality.</p>
+                        </div>
+                        
+                        <div class="process-step step-3">
+                            <h3 class="text-xl font-bold mb-3">Handcrafting</h3>
+                            <p class="text-amber-200">Our artisans employ centuries-old techniques - weaving, carving, molding - to transform raw materials into beautiful forms.</p>
+                        </div>
+                        
+                        <div class="process-step step-4">
+                            <h3 class="text-xl font-bold mb-3">Finishing Touches</h3>
+                            <p class="text-amber-200">Each piece receives careful attention to detail with natural finishes that enhance the material's beauty.</p>
+                        </div>
+                        
+                        <div class="process-step step-5">
+                            <h3 class="text-xl font-bold mb-3">Quality Assurance</h3>
+                            <p class="text-amber-200">Every item undergoes rigorous inspection to ensure it meets our high standards before reaching customers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-amber-700 rounded-xl overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1587049016823-69ef9d68bd44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Crafting Process" class="w-full h-[500px] object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Impact -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">Our Community Impact</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-amber-100 p-6 rounded-xl text-center">
+                            <div class="text-4xl font-bold text-amber-800 mb-2">50+</div>
+                            <p class="text-amber-700 font-medium">Skilled Artisans Employed</p>
+                        </div>
+                        <div class="bg-amber-100 p-6 rounded-xl text-center">
+                            <div class="text-4xl font-bold text-amber-800 mb-2">15</div>
+                            <p class="text-amber-700 font-medium">Apprentices Trained Annually</p>
+                        </div>
+                        <div class="bg-amber-100 p-6 rounded-xl text-center">
+                            <div class="text-4xl font-bold text-amber-800 mb-2">200+</div>
+                            <p class="text-amber-700 font-medium">Families Supported</p>
+                        </div>
+                        <div class="bg-amber-100 p-6 rounded-xl text-center">
+                            <div class="text-4xl font-bold text-amber-800 mb-2">5</div>
+                            <p class="text-amber-700 font-medium">Villages Engaged</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-amber-800 mb-4">Empowering Rural Communities</h3>
+                        <p class="text-amber-700 mb-4">
+                            At Dinajpur Handicrafts, we believe in creating opportunities that transform communities. By providing fair wages and stable employment, we're helping to:
+                        </p>
+                        <ul class="space-y-2 text-amber-700 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-600 mr-2 mt-1"></i>
+                                <span>Preserve traditional crafts at risk of disappearing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-600 mr-2 mt-1"></i>
+                                <span>Create sustainable livelihoods in rural areas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-600 mr-2 mt-1"></i>
+                                <span>Support education for artisans' children</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-600 mr-2 mt-1"></i>
+                                <span>Promote gender equality through equal pay initiatives</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center text-amber-700 font-medium hover:text-amber-800">
+                            <i class="fas fa-hand-holding-heart mr-2"></i> Learn about our community programs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Experience Authentic Craftsmanship</h2>
+            <p class="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
+                Discover our collection of handmade treasures, each telling a story of tradition and skill.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="products.html" class="bg-white text-amber-800 hover:bg-amber-100 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+                    Browse Our Collection
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white hover:bg-amber-800 font-bold py-3 px-8 rounded-lg transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dinajpur Handicrafts BD</h3>
+                    <p class="text-amber-200 mb-4">
+                        Preserving traditional craftsmanship while creating beautiful, sustainable products for modern living.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-white text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-white text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-white text-xl">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-white text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Our Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="products.html?material=bamboo" class="text-amber-200 hover:text-white">Bamboo Collection</a></li>
+                        <li><a href="products.html?material=jute" class="text-amber-200 hover:text-white">Jute Collection</a></li>
+                        <li><a href="products.html?material=gypsum" class="text-amber-200 hover:text-white">Gypsum Collection</a></li>
+                        <li><a href="products.html?material=macrame" class="text-amber-200 hover:text-white">Macrame Collection</a></li>
+                        <li><a href="products.html" class="text-amber-200 hover:text-white">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Information</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-amber-200 hover:text-white">About Us</a></li>
+                        <li><a href="gallery.html" class="text-amber-200 hover:text-white">Our Gallery</a></li>
+                        <li><a href="#" class="text-amber-200 hover:text-white">Wholesale Program</a></li>
+                        <li><a href="#" class="text-amber-200 hover:text-white">Sustainability</a></li>
+                        <li><a href="contact.html" class="text-amber-200 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-amber-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Craft Lane, Dinajpur, Bangladesh</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-3"></i>
+                            <span>+880 XXXX XXXXXX</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>orders@dinajpurhandicrafts.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp mt-1 mr-3"></i>
+                            <span>+880 XXXX XXXXXX</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Dinajpur Handicrafts BD. All rights reserved.</p>
+                 <p class="mt-2">Handcrafted with <i class="fas fa-heart text-red-500"></i> in Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top Functionality
+        const scrollTopButton = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.classList.add('show');
+            } else {
+                scrollTopButton.classList.remove('show');
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Artisan card hover effects
+        const artisanCards = document.querySelectorAll('.artisan-card');
+        artisanCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+            });
+        });
+
+        // Values card hover effects
+        const valuesCards = document.querySelectorAll('.values-card');
+        valuesCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

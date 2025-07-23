@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Dinajpur Handicrafts BD</title>
+  <meta name="description" content="Wholesale bamboo, jute, gypsum and macrame handicrafts from Dinajpur, Bangladesh.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .product-card {
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(146, 64, 14, 0.2);
+    }
+    .product-image {
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-image {
+      transform: scale(1.03);
+    }
+    .filter-btn.active {
+      background-color: #b45309;
+      color: white;
+    }
+    .filter-btn {
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover {
+      background-color: #fde68a;
+    }
+    .material-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .min-order {
+      font-size: 0.85rem;
+      color: #78350f;
+      font-weight: 500;
+      background-color: #fef3c7;
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .scroll-top.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-amber-50">
+  <!-- Scroll to top button -->
+
+
+  <!-- Navbar -->
+  <nav class="bg-amber-800 text-white p-6 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold flex items-center">
+        <i class="fas fa-hands mr-2"></i> Dinajpur Handicrafts BD
+      </a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-amber-200 font-medium">Home</a>
+        <a href="products.html" class="text-amber-300 font-medium border-b-2 border-amber-300">Products</a>
+        <a href="about.html" class="hover:text-amber-200 font-medium">About</a>
+        <a href="gallery.html" class="hover:text-amber-200 font-medium">Gallery</a>
+        <a href="contact.html" class="hover:text-amber-200 font-medium">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-amber-700">
+      <div class="container mx-auto flex flex-col space-y-2 py-2">
+        <a href="index.html" class="px-4 py-2 hover:bg-amber-600">Home</a>
+        <a href="products.html" class="px-4 py-2 bg-amber-600">Products</a>
+        <a href="about.html" class="px-4 py-2 hover:bg-amber-600">About</a>
+        <a href="gallery.html" class="px-4 py-2 hover:bg-amber-600">Gallery</a>
+        <a href="contact.html" class="px-4 py-2 hover:bg-amber-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Service Info Bar -->
+  <div class="bg-amber-900 text-white py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Nationwide Wholesale Delivery
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Bulk Order Discounts
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+          </svg>
+          Custom Manufacturing
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Page Header -->
+  <section class="py-12 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Handcrafted Collection</h1>
+      <p class="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
+        Discover authentic bamboo, jute, gypsum and macrame products crafted by skilled artisans in Dinajpur
+      </p>
+      <div class="flex justify-center">
+        <div class="relative max-w-xl w-full">
+          
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <!-- Filters -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold text-amber-900 mb-4">Filter by Material</h2>
+        <div class="flex flex-wrap gap-3">
+          <button class="filter-btn active bg-amber-600 text-white px-4 py-2 rounded-full">All Products</button>
+         
+        </div>
+      </div>
+      
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Macrame Wall Hanging" class="product-image w-full h-64 object-cover">
+            <span class="material-badge bg-amber-700 text-white">Macrame</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">Large Macrame Wall Hanging</h3>
+            <p class="text-amber-700 mb-4">Bohemian-style decor piece for living spaces. Made with natural cotton cord.</p>
+            <div class="min-order">Min. Order: 30 pieces</div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Macrame Wall Hanging for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-lg flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+              <button class="text-amber-700 hover:text-amber-900">
+                <i class="far fa-heart text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1591195853828-11bb59c7eadf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Jute Tote Bags" class="product-image w-full h-64 object-cover">
+            <span class="material-badge bg-amber-700 text-white">Jute</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">Eco-Friendly Jute Tote Bags</h3>
+            <p class="text-amber-700 mb-4">Customizable shopping bags with natural patterns. Durable and sustainable.</p>
+            <div class="min-order">Min. Order: 100 pieces</div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Jute Tote Bags for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-lg flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+              <button class="text-amber-700 hover:text-amber-900">
+                <i class="far fa-heart text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1562602838-3e9f6d5d1216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Gypsum Decor" class="product-image w-full h-64 object-cover">
+            <span class="material-badge bg-amber-700 text-white">Gypsum</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">Gypsum Wall Art Panels</h3>
+            <p class="text-amber-700 mb-4">Modern 3D textured panels for interior decoration. Lightweight and elegant.</p>
+            <div class="min-order">Min. Order: 40 pieces</div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Gypsum Wall Art for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-lg flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+              <button class="text-amber-700 hover:text-amber-900">
+                <i class="far fa-heart text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+          <!-- Product 1 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Bamboo Basket Set" class="product-image w-full h-64 object-cover">
+            <span class="material-badge bg-amber-700 text-white">Bamboo</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">Bamboo Storage Basket Set</h3>
+            <p class="text-amber-700 mb-4">Set of 3 nesting baskets - perfect for home organization. Handwoven with sustainable bamboo.</p>
+            <div class="min-order">Min. Order: 50 sets</div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Bamboo Storage Basket Set for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-lg flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+              <button class="text-amber-700 hover:text-amber-900">
+                <i class="far fa-heart text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1595341888024-eade2b4f1d19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Bamboo Lamp" class="product-image w-full h-64 object-cover">
+            <span class="material-badge bg-amber-700 text-white">Bamboo</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">Bamboo Table Lamp</h3>
+            <p class="text-amber-700 mb-4">Elegant bamboo lamp with rattan shade. Creates warm ambient lighting.</p>
+            <div class="min-order">Min. Order: 30 pieces</div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Bamboo Table Lamp for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-lg flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+              <button class="text-amber-700 hover:text-amber-900">
+                <i class="far fa-heart text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Jute Rug" class="product-image w-full h-64 object-cover">
+            <span class="material-badge bg-amber-700 text-white">Jute</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">Handwoven Jute Area Rug</h3>
+            <p class="text-amber-700 mb-4">Natural jute rug with geometric pattern. Durable and eco-friendly floor covering.</p>
+            <div class="min-order">Min. Order: 25 pieces</div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Jute Area Rug for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-5 rounded-lg flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Order via WhatsApp
+              </a>
+              <button class="text-amber-700 hover:text-amber-900">
+                <i class="far fa-heart text-xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+     
+    </div>
+  </section>
+
+  <!-- Wholesale CTA -->
+  <section class="py-16 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Looking for Larger Quantities?</h2>
+      <p class="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
+        We offer special wholesale pricing for bulk orders. Contact us for custom quotes and exclusive deals.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="contact.html" class="bg-white text-amber-800 hover:bg-amber-100 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+          Request Wholesale Pricing
+        </a>
+        <a href="tel:+880XXXXXXXXXX" class="bg-transparent border-2 border-white hover:bg-amber-800 font-bold py-3 px-8 rounded-lg transition duration-300">
+          <i class="fas fa-phone mr-2"></i> Call Us Directly
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white pt-12 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Dinajpur Handicrafts BD</h3>
+          <p class="text-amber-200 mb-4">
+            Preserving traditional craftsmanship while creating beautiful, sustainable products for modern living.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Our Products</h4>
+          <ul class="space-y-2">
+            <li><a href="products.html?material=bamboo" class="text-amber-200 hover:text-white">Bamboo Collection</a></li>
+            <li><a href="products.html?material=jute" class="text-amber-200 hover:text-white">Jute Collection</a></li>
+            <li><a href="products.html?material=gypsum" class="text-amber-200 hover:text-white">Gypsum Collection</a></li>
+            <li><a href="products.html?material=macrame" class="text-amber-200 hover:text-white">Macrame Collection</a></li>
+            <li><a href="products.html" class="text-amber-200 hover:text-white">All Products</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Information</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-amber-200 hover:text-white">About Us</a></li>
+            <li><a href="gallery.html" class="text-amber-200 hover:text-white">Our Gallery</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Wholesale Program</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Sustainability</a></li>
+            <li><a href="contact.html" class="text-amber-200 hover:text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-amber-200">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>123 Craft Lane, Dinajpur, Bangladesh</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3"></i>
+              <span>+880 XXXX XXXXXX</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3"></i>
+              <span>orders@dinajpurhandicrafts.com</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fab fa-whatsapp mt-1 mr-3"></i>
+              <span>+880 XXXX XXXXXX</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-amber-800 pt-8 text-center text-sm">
+        <p>&copy; 2025 Dinajpur Handicrafts BD. All rights reserved.</p>
+         <p class="mt-2">Handcrafted with <i class="fas fa-heart text-red-500"></i> in Bangladesh</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Scroll to Top Functionality
+    const scrollTopButton = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopButton.classList.add('show');
+      } else {
+        scrollTopButton.classList.remove('show');
+      }
+    });
+    
+    scrollTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Filter buttons functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active', 'bg-amber-600', 'text-white'));
+        filterBtns.forEach(b => b.classList.add('bg-amber-100', 'text-amber-800'));
+        
+        // Add active class to clicked button
+        this.classList.add('active', 'bg-amber-600', 'text-white');
+        this.classList.remove('bg-amber-100', 'text-amber-800');
+        
+        // In a real implementation, this would filter the products
+        // For this demo, we'll just show an alert
+        const material = this.textContent === 'All Products' ? 'all materials' : this.textContent.toLowerCase();
+        alert(`Filtering products by: ${material}. In a real implementation, this would show only ${material} products.`);
+      });
+    });
+
+    // Product card hover effects
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+      });
+    });
+  </script>
+</body>
+</html>

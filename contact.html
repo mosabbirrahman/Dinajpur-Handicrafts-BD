@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Dinajpur Handicraft's BD</title>
+  <meta name="description" content="Get in touch with Dinajpur Handicraft's BD. We're here to answer your questions about our handmade crafts.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefaf0;
+      color: #5c3d0c;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .contact-form input, 
+    .contact-form textarea {
+      border: 1px solid #d1c0a5;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-form input:focus, 
+    .contact-form textarea:focus {
+      border-color: #b38b59;
+      box-shadow: 0 0 0 3px rgba(179, 139, 89, 0.2);
+      outline: none;
+    }
+    
+    .contact-icon {
+      background-color: #f5e9d7;
+      color: #8b5a2b;
+    }
+    
+    .map-container {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .submit-btn {
+      background: linear-gradient(to right, #b38b59, #8b5a2b);
+      transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      background: linear-gradient(to right, #8b5a2b, #6b4518);
+      transform: translateY(-2px);
+    }
+    
+    .social-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+    
+    .pattern-bg {
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f5e9d7' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-amber-800 text-white p-6 sticky top-0">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+     <a href="index.html" class="text-2xl font-bold flex items-center">
+        <i class="fas fa-hands mr-2"></i> Dinajpur Handicrafts BD
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-amber-200">Home</a>
+        <a href="products.html" class="hover:text-amber-200">Products</a>
+        <a href="about.html" class="hover:text-amber-200">About</a>
+        <a href="gallery.html" class="hover:text-amber-200">Gallery</a>
+        <a href="contact.html" class="text-amber-200 font-semibold border-b-2 border-amber-300">Contact</a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Items -->
+    <div id="mobile-menu" class="hidden md:hidden bg-amber-700">
+      <div class="container mx-auto flex flex-col space-y-2 py-2">
+        <a href="index.html" class="px-4 py-2 hover:bg-amber-600">Home</a>
+        <a href="products.html" class="px-4 py-2 hover:bg-amber-600">Products</a>
+        <a href="about.html" class="px-4 py-2 hover:bg-amber-600">About</a>
+        <a href="gallery.html" class="px-4 py-2 hover:bg-amber-600">Gallery</a>
+        <a href="contact.html" class="px-4 py-2 bg-amber-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Service Info Bar -->
+  <div class="bg-amber-900 text-white py-3">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Nationwide Delivery
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Secure Payment Options
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+          </svg>
+          Custom Orders Available
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Page Content -->
+  <section class="py-12 pattern-bg">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Contact Us</h1>
+        <div class="w-24 h-1 bg-amber-700 mx-auto mb-6"></div>
+        <p class="text-lg text-amber-800 max-w-3xl mx-auto">
+          Have questions about our handmade crafts? Our team is here to help. Reach out to us through any of the channels below, or visit our showroom to see our beautiful creations in person.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div>
+          <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-amber-900 mb-8">Get In Touch</h2>
+            
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="contact-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <i class="fas fa-phone text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-amber-800 mb-1">Phone</h3>
+                  <p class="text-amber-700">+880 1711 223344</p>
+                  <p class="text-amber-700 mt-1">+880 1811 556677</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="contact-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-amber-800 mb-1">Email</h3>
+                  <p class="text-amber-700">info@dinajpurhandicrafts.com</p>
+                  <p class="text-amber-700 mt-1">support@dinajpurhandicrafts.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="contact-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-amber-800 mb-1">Address</h3>
+                  <p class="text-amber-700">123 Crafters Lane, Artisan Village</p>
+                  <p class="text-amber-700">Dinajpur 5200, Bangladesh</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="contact-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <i class="fab fa-whatsapp text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-amber-800 mb-1">WhatsApp</h3>
+                  <a href="https://wa.me/8801711223344" class="text-amber-700 hover:text-amber-900 underline">Message us on WhatsApp</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-10">
+              <h3 class="text-xl font-semibold text-amber-800 mb-4">Business Hours</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-amber-700">Monday - Friday</span>
+                  <span class="font-medium text-amber-800">9:00 AM - 8:00 PM</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-amber-700">Saturday</span>
+                  <span class="font-medium text-amber-800">10:00 AM - 6:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-amber-700">Sunday</span>
+                  <span class="font-medium text-amber-800">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-amber-900 mb-6">Follow Us</h2>
+            <p class="text-amber-700 mb-6">Stay updated with our latest collections and artisan stories</p>
+            <div class="flex space-x-4">
+              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
+                <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
+                <i class="fab fa-pinterest text-xl"></i>
+              </a>
+              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
+                <i class="fab fa-youtube text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form and Map -->
+        <div>
+          <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-amber-900 mb-6">Send Us a Message</h2>
+            <form class="contact-form space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-amber-800 font-medium mb-2">Your Name</label>
+                  <input type="text" id="name" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your name">
+                </div>
+                <div>
+                  <label for="email" class="block text-amber-800 font-medium mb-2">Email Address</label>
+                  <input type="email" id="email" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your email">
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="phone" class="block text-amber-800 font-medium mb-2">Phone Number</label>
+                  <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone">
+                </div>
+                <div>
+                  <label for="subject" class="block text-amber-800 font-medium mb-2">Subject</label>
+                  <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="What is this regarding?">
+                </div>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-amber-800 font-medium mb-2">Your Message</label>
+                <textarea id="message" rows="6" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Tell us about your inquiry..."></textarea>
+              </div>
+              
+              <div>
+                <button type="submit" class="submit-btn w-full py-3 rounded-lg text-white font-semibold text-lg">
+                  Send Message <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-amber-900 mb-6">Visit Our Showroom</h2>
+            <div class="map-container h-96 rounded-lg overflow-hidden mb-6">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.507242423465!2d88.63687351548578!3d25.20518748390532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fc52e002c6d0b5%3A0xec5ca4d3b1d6b6b1!2sDinajpur%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+                      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-car text-amber-700 text-2xl mr-4"></i>
+              <p class="text-amber-700">Ample parking available in front of our showroom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4">Frequently Asked Questions</h2>
+        <div class="w-24 h-1 bg-amber-700 mx-auto mb-6"></div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <button class="faq-question w-full text-left p-6 font-semibold text-lg text-amber-900 flex justify-between items-center">
+              How long does delivery take?
+              <i class="fas fa-chevron-down text-amber-700"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-amber-700 hidden">
+              Delivery within Bangladesh typically takes 3-5 business days. For international orders, please allow 7-14 business days depending on your location. All items are carefully packaged to ensure safe arrival.
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <button class="faq-question w-full text-left p-6 font-semibold text-lg text-amber-900 flex justify-between items-center">
+              Do you accept custom orders?
+              <i class="fas fa-chevron-down text-amber-700"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-amber-700 hidden">
+              Yes, we love creating custom pieces! Please contact us with your requirements at least 4 weeks before you need the item. Custom orders require a 50% deposit to begin work, with the balance due upon completion.
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <button class="faq-question w-full text-left p-6 font-semibold text-lg text-amber-900 flex justify-between items-center">
+              What payment methods do you accept?
+              <i class="fas fa-chevron-down text-amber-700"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-amber-700 hidden">
+              We accept all major credit/debit cards (Visa, MasterCard, American Express), mobile banking (bKash, Nagad, Rocket), bank transfers, and cash on delivery within Bangladesh. For international orders, we accept credit cards and PayPal.
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <button class="faq-question w-full text-left p-6 font-semibold text-lg text-amber-900 flex justify-between items-center">
+              Can I return or exchange an item?
+              <i class="fas fa-chevron-down text-amber-700"></i>
+            </button>
+            <div class="faq-answer px-6 pb-6 text-amber-700 hidden">
+              We accept returns within 14 days of delivery if the item is in its original condition. Custom-made items cannot be returned. For exchanges, please contact us within 7 days of receiving your order. Return shipping costs are the responsibility of the customer unless the item was damaged or defective.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="py-16 bg-amber-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Explore Our Collection?</h2>
+      <p class="text-xl max-w-3xl mx-auto mb-8">Discover unique handmade treasures crafted by talented artisans from Dinajpur.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="products.html" class="bg-white text-amber-800 font-semibold py-3 px-8 rounded-lg hover:bg-amber-100 transition duration-300">
+          Shop Now
+        </a>
+        <a href="gallery.html" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-amber-800 transition duration-300">
+          View Gallery
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Dinajpur Handicraft's BD</h3>
+          <p class="text-amber-200 mb-4">Preserving tradition through handmade creations</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-amber-200 hover:text-white">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white">
+              <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-amber-200 hover:text-white">Home</a></li>
+            <li><a href="products.html" class="text-amber-200 hover:text-white">Products</a></li>
+            <li><a href="about.html" class="text-amber-200 hover:text-white">About Us</a></li>
+            <li><a href="gallery.html" class="text-amber-200 hover:text-white">Gallery</a></li>
+            <li><a href="contact.html" class="text-amber-200 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Customer Care</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-amber-200 hover:text-white">Shipping Policy</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Returns & Exchanges</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Terms & Conditions</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+          <p class="text-amber-200 mb-4">Subscribe to get updates on new products and special offers</p>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-gray-800 focus:outline-none">
+            <button class="bg-amber-700 hover:bg-amber-600 px-4 rounded-r">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm">
+        <p>&copy; 2023 Dinajpur Handicraft's BD. All rights reserved.</p>
+        <p class="mt-2">Handcrafted with <i class="fas fa-heart text-red-500"></i> in Bangladesh</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+    
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('i');
+        
+        if (answer.classList.contains('hidden')) {
+          answer.classList.remove('hidden');
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          answer.classList.add('hidden');
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      });
+    });
+    
+    // Form submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

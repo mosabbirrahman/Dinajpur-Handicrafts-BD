@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinajpur Handicrafts BD | Wholesale Bamboo, Jute & Macrame Products</title>
+  <meta name="description" content="Wholesale supplier of authentic handmade bamboo, jute, gypsum and macrame products. Crafted by artisans in Dinajpur, Bangladesh.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .material-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .material-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .product-card:hover .product-image {
+      transform: scale(1.03);
+    }
+    .product-image {
+      transition: transform 0.4s ease;
+    }
+    .artisan-image {
+      transition: all 0.4s ease;
+    }
+    .artisan-card:hover .artisan-image {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px -5px rgba(146, 64, 14, 0.3);
+    }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    @media (max-width: 768px) {
+      .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .scroll-top.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-amber-50">
+  
+  <!-- Scroll to top button -->
+  <button id="scrollTop" class="scroll-top bg-amber-700 text-white p-3 rounded-full shadow-lg">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navbar -->
+  <nav class="bg-amber-800 text-white p-6 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold flex items-center">
+        <i class="fas fa-hands mr-2"></i> Dinajpur Handicraft's BD
+      </a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-amber-300 font-medium border-b-2 border-amber-300">Home</a>
+        <a href="products.html" class="hover:text-amber-200 font-medium">Products</a>
+        <a href="about.html" class="hover:text-amber-200 font-medium">About</a>
+        <a href="gallery.html" class="hover:text-amber-200 font-medium">Gallery</a>
+        <a href="contact.html" class="hover:text-amber-200 font-medium">Contact</a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-amber-700">
+      <div class="container mx-auto flex flex-col space-y-2 py-2">
+        <a href="index.html" class="px-4 py-2 hover:bg-amber-600">Home</a>
+        <a href="products.html" class="px-4 py-2 hover:bg-amber-600">Products</a>
+        <a href="about.html" class="px-4 py-2 hover:bg-amber-600">About</a>
+        <a href="gallery.html" class="px-4 py-2 hover:bg-amber-600">Gallery</a>
+        <a href="contact.html" class="px-4 py-2 hover:bg-amber-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+<section class="bg-yellow-100 py-4">
+  <marquee behavior="scroll" direction="left" scrollamount="10" class="text-lg font-bold text-gray-800">
+    আমরা নিজস্ব কারখানায় প্রস্তুতকৃত পণ্য পাইকারিতে বিক্রি করে থাকি। আমাদের কাছে পাবেন— পাট, হোগলা, জিপসাম, ম্যাক্রাম, বাঁশসহ নানা ধরনের হস্তশিল্প পণ্য। যেকোনো অর্ডারের জন্য আজই যোগাযোগ করুন! &nbsp; | &nbsp; 
+    We wholesale products manufactured in our own factory.
+From us, you will find jute, hogla, gypsum, macrame, bamboo, and a wide variety of handcrafted items.
+Contact us today to place your order!
+  </marquee>
+</section>
+
+ 
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-amber-400 to-amber-600 py-16 md:py-24">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Wholesale Handicrafts from Dinajpur</h1>
+        <p class="text-lg text-amber-100 mb-6">
+          Premium jute, gypsum, macrame,and bamboo products crafted by skilled artisans. Ideal for retailers, interior designers, and gift shops.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="products.html" class="bg-transparent border-2 border-white text-white hover:bg-amber-700 font-bold py-3 px-6 rounded-lg transition duration-300">Browse Products</a>
+         
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="grid grid-cols-2 gap-4 max-w-md">
+          <div class="bg-white p-3 rounded-lg shadow-lg flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1600857062241-98c2354c1a4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bamboo Products" class="rounded h-40 w-full object-cover">
+          </div>
+          <div class="bg-white p-3 rounded-lg shadow-lg flex items-center justify-center mt-8">
+            <img src="https://images.unsplash.com/photo-1583744946564-b52ac1c389c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Jute Products" class="rounded h-40 w-full object-cover">
+          </div>
+          <div class="bg-white p-3 rounded-lg shadow-lg flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Macrame Products" class="rounded h-40 w-full object-cover">
+          </div>
+          <div class="bg-white p-3 rounded-lg shadow-lg flex items-center justify-center mt-8">
+            <img src="https://images.unsplash.com/photo-1587049016823-69ef9d68bd44?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Gypsum Products" class="rounded h-40 w-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Showcase -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-amber-900 mb-4">Our Craft Materials</h2>
+      <p class="text-center text-amber-700 max-w-2xl mx-auto mb-12">
+        We specialize in creating beautiful handicrafts using sustainable, locally-sourced materials
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+       
+        
+        <!-- Jute -->
+        <div class="material-card bg-amber-50 p-6 rounded-lg shadow border-t-4 border-amber-600">
+          <div class="text-amber-700 text-4xl mb-4">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-800 mb-3">Jute Creations</h3>
+          <p class="text-amber-700 mb-4">Sustainable jute products including bags, rugs, and decorative items that showcase the versatility of this natural fiber.</p>
+          <a href="products.html?material=jute" class="text-amber-600 font-medium inline-flex items-center">
+            View Jute Collection
+            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+        
+        <!-- Gypsum -->
+        <div class="material-card bg-amber-50 p-6 rounded-lg shadow border-t-4 border-amber-600">
+          <div class="text-amber-700 text-4xl mb-4">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-800 mb-3">Gypsum Art</h3>
+          <p class="text-amber-700 mb-4">Elegant gypsum wall art, sculptures, and decorative pieces that add a touch of sophistication to any space.</p>
+          <a href="products.html?material=gypsum" class="text-amber-600 font-medium inline-flex items-center">
+            View Gypsum Collection
+            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+        
+        <!-- Macrame -->
+        <div class="material-card bg-amber-50 p-6 rounded-lg shadow border-t-4 border-amber-600">
+          <div class="text-amber-700 text-4xl mb-4">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-800 mb-3">Macrame Designs</h3>
+          <p class="text-amber-700 mb-4">Intricate macrame wall hangings, plant hangers, and home accessories that showcase traditional knotting techniques.</p>
+          <a href="products.html?material=macrame" class="text-amber-600 font-medium inline-flex items-center">
+            View Macrame Collection
+            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+         <!-- Bamboo -->
+        <div class="material-card bg-amber-50 p-6 rounded-lg shadow border-t-4 border-amber-600">
+          <div class="text-amber-700 text-4xl mb-4">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-800 mb-3">Bamboo Crafts</h3>
+          <p class="text-amber-700 mb-4">Eco-friendly bamboo products including baskets, furniture, and home decor items that combine durability with natural beauty.</p>
+          <a href="products.html?material=bamboo" class="text-amber-600 font-medium inline-flex items-center">
+            View Bamboo Collection
+            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Featured Products -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-amber-900 mb-2">Best Selling Wholesale Products</h2>
+        <p class="text-amber-700 max-w-2xl mx-auto">Our most popular items for retailers and interior designers</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-amber-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Macrame Wall Hanging" class="product-image w-full h-60 object-cover">
+            <div class="absolute top-2 right-2 bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Macrame
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-amber-800 mb-2">Large Macrame Wall Hanging</h3>
+            <p class="text-amber-700 text-sm mb-4">Bohemian-style decor piece for living spaces</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-700 font-medium">Min. Order: 30 pieces</span>
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Macrame Wall Hanging for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-sm">
+                <i class="fab fa-whatsapp mr-1"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-amber-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1591195853828-11bb59c7eadf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jute Tote Bags" class="product-image w-full h-60 object-cover">
+            <div class="absolute top-2 right-2 bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Jute
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-amber-800 mb-2">Eco-Friendly Jute Tote Bags</h3>
+            <p class="text-amber-700 text-sm mb-4">Customizable shopping bags with natural patterns</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-700 font-medium">Min. Order: 100 pieces</span>
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Jute Tote Bags for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-sm">
+                <i class="fab fa-whatsapp mr-1"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card bg-amber-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1562602838-3e9f6d5d1216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gypsum Decor" class="product-image w-full h-60 object-cover">
+            <div class="absolute top-2 right-2 bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Gypsum
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-amber-800 mb-2">Gypsum Wall Art Panels</h3>
+            <p class="text-amber-700 text-sm mb-4">Modern 3D textured panels for interior decoration</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-700 font-medium">Min. Order: 40 pieces</span>
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Gypsum Wall Art for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-sm">
+                <i class="fab fa-whatsapp mr-1"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </div>
+          <!-- Product 1 -->
+        <div class="product-card bg-amber-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bamboo Basket Set" class="product-image w-full h-60 object-cover">
+            <div class="absolute top-2 right-2 bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+              Bamboo
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-amber-800 mb-2">Bamboo Storage Basket Set</h3>
+            <p class="text-amber-700 text-sm mb-4">Set of 3 nesting baskets - perfect for home organization</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-700 font-medium">Min. Order: 50 sets</span>
+              <a href="https://wa.me/8801XXXXXXXXX?text=Hi, I'm interested in Bamboo Storage Basket Set for wholesale" 
+                 class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded text-sm">
+                <i class="fab fa-whatsapp mr-1"></i> Inquire
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-10">
+        <a href="products.html" class="inline-flex items-center text-amber-700 font-bold hover:text-amber-800">
+          View Full Product Catalog
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wholesale Benefits -->
+  <section class="py-16 bg-amber-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wholesale Packaging" class="rounded-xl shadow-xl">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-amber-900 mb-6">Why Choose Our Wholesale Handicrafts?</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-amber-700 text-white rounded-full p-3 mr-4">
+                <i class="fas fa-box-open"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-amber-800 mb-2">Bulk Order Discounts</h3>
+                <p class="text-amber-700">Competitive pricing for wholesale orders with discounts based on volume.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-amber-700 text-white rounded-full p-3 mr-4">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-amber-800 mb-2">Consistent Supply</h3>
+                <p class="text-amber-700">Reliable inventory and production capacity to meet your business needs.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-amber-700 text-white rounded-full p-3 mr-4">
+                <i class="fas fa-pen-fancy"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-amber-800 mb-2">Customization Options</h3>
+                <p class="text-amber-700">Tailor products to your specifications with custom designs and branding.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-amber-700 text-white rounded-full p-3 mr-4">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-amber-800 mb-2">Eco-Friendly Focus</h3>
+                <p class="text-amber-700">Sustainable materials and ethical production that appeals to conscious consumers.</p>
+              </div>
+            </div>
+          </div>
+          
+          <a href="contact.html" class="mt-8 inline-block bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+            Request Wholesale Catalog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+  <!-- Wholesale CTA -->
+  <section class="py-20 bg-gradient-to-r from-amber-500 to-amber-700 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Stock Our Handicrafts?</h2>
+      <p class="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
+        Join hundreds of retailers who feature our authentic Dinajpur handicrafts in their stores
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="contact.html" class="bg-white text-amber-800 hover:bg-amber-100 font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+          Request Wholesale Pricing
+        </a>
+        <a href="tel:+880XXXXXXXXXX" class="bg-transparent border-2 border-white hover:bg-amber-800 font-bold py-3 px-8 rounded-lg transition duration-300">
+          <i class="fas fa-phone mr-2"></i> Call Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white pt-12 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Dinajpur Handicrafts BD</h3>
+          <p class="text-amber-200 mb-4">
+            Preserving traditional craftsmanship while creating beautiful, sustainable products for modern living.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Our Products</h4>
+          <ul class="space-y-2">
+            <li><a href="products.html?material=bamboo" class="text-amber-200 hover:text-white">Bamboo Collection</a></li>
+            <li><a href="products.html?material=jute" class="text-amber-200 hover:text-white">Jute Collection</a></li>
+            <li><a href="products.html?material=gypsum" class="text-amber-200 hover:text-white">Gypsum Collection</a></li>
+            <li><a href="products.html?material=macrame" class="text-amber-200 hover:text-white">Macrame Collection</a></li>
+            <li><a href="products.html" class="text-amber-200 hover:text-white">All Products</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Information</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-amber-200 hover:text-white">About Us</a></li>
+            <li><a href="gallery.html" class="text-amber-200 hover:text-white">Our Gallery</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Wholesale Program</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Sustainability</a></li>
+            <li><a href="contact.html" class="text-amber-200 hover:text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-amber-200">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>123 Craft Lane, Dinajpur, Bangladesh</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3"></i>
+              <span>+880 XXXX XXXXXX</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3"></i>
+              <span>orders@dinajpurhandicrafts.com</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fab fa-whatsapp mt-1 mr-3"></i>
+              <span>+880 XXXX XXXXXX</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-amber-800 pt-8 text-center text-sm">
+        <p>&copy; 2025 Dinajpur Handicrafts BD. All rights reserved.</p>
+         <p class="mt-2">Handcrafted with <i class="fas fa-heart text-red-500"></i> in Bangladesh</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
