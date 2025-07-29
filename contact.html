@@ -6,6 +6,7 @@
   <title>Contact - Dinajpur Handicraft's BD</title>
   <meta name="description" content="Get in touch with Dinajpur Handicraft's BD. We're here to answer your questions about our handmade crafts.">
   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="icon" type="image/png" sizes="16x16" href="assets/dinajpur.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
@@ -73,6 +74,22 @@
     
     .pattern-bg {
       background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23f5e9d7' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    
+    /* Success message styles */
+    .success-message {
+      display: none;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      background-color: #d1e7dd;
+      color: #0f5132;
+      animation: fadeIn 0.5s;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
@@ -165,8 +182,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-amber-800 mb-1">Phone</h3>
-                  <p class="text-amber-700">+880 1711 223344</p>
-                  <p class="text-amber-700 mt-1">+880 1811 556677</p>
+                  <p class="text-amber-700">+880 1341396299</p>
                 </div>
               </div>
               
@@ -176,8 +192,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-amber-800 mb-1">Email</h3>
-                  <p class="text-amber-700">info@dinajpurhandicrafts.com</p>
-                  <p class="text-amber-700 mt-1">support@dinajpurhandicrafts.com</p>
+                  <p class="text-amber-700">dinajpurhandicrafts@gmail.com</p>
                 </div>
               </div>
               
@@ -187,7 +202,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-amber-800 mb-1">Address</h3>
-                  <p class="text-amber-700">123 Crafters Lane, Artisan Village</p>
+                  <p class="text-amber-700">BaluBaru,Sadar Dinajpur</p>
                   <p class="text-amber-700">Dinajpur 5200, Bangladesh</p>
                 </div>
               </div>
@@ -198,7 +213,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-semibold text-amber-800 mb-1">WhatsApp</h3>
-                  <a href="https://wa.me/8801711223344" class="text-amber-700 hover:text-amber-900 underline">Message us on WhatsApp</a>
+                  <a href="https://wa.me/8801341396299?text=Hi" class="text-amber-700 hover:text-amber-900 underline">Message us on WhatsApp</a>
                 </div>
               </div>
             </div>
@@ -226,17 +241,11 @@
             <h2 class="text-2xl font-bold text-amber-900 mb-6">Follow Us</h2>
             <p class="text-amber-700 mb-6">Stay updated with our latest collections and artisan stories</p>
             <div class="flex space-x-4">
-              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
+              <a href="https://www.facebook.com/profile.php?id=61578729983519" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
                 <i class="fab fa-facebook-f text-xl"></i>
               </a>
-              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
-                <i class="fab fa-pinterest text-xl"></i>
-              </a>
-              <a href="#" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
-                <i class="fab fa-youtube text-xl"></i>
+              <a href="https://wa.me/8801341396299" class="social-icon w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center text-white hover:bg-amber-800">
+                <i class="fab fa-whatsapp text-xl"></i>
               </a>
             </div>
           </div>
@@ -246,38 +255,49 @@
         <div>
           <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 class="text-3xl font-bold text-amber-900 mb-6">Send Us a Message</h2>
-            <form class="contact-form space-y-6">
+            <!-- Updated form with email functionality -->
+            <form id="contactForm" class="contact-form space-y-6" action="https://formsubmit.co/dinajpurhandicrafts@gmail.com" method="POST">
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="New message from Dinajpur Handicrafts website">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="#success">
+              
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label for="name" class="block text-amber-800 font-medium mb-2">Your Name</label>
-                  <input type="text" id="name" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your name">
+                  <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your name" required>
                 </div>
                 <div>
                   <label for="email" class="block text-amber-800 font-medium mb-2">Email Address</label>
-                  <input type="email" id="email" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your email">
+                  <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your email" required>
                 </div>
               </div>
               
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label for="phone" class="block text-amber-800 font-medium mb-2">Phone Number</label>
-                  <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone">
+                  <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Enter your phone">
                 </div>
                 <div>
                   <label for="subject" class="block text-amber-800 font-medium mb-2">Subject</label>
-                  <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="What is this regarding?">
+                  <input type="text" id="subject" name="_subject" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="What is this regarding?">
                 </div>
               </div>
               
               <div>
                 <label for="message" class="block text-amber-800 font-medium mb-2">Your Message</label>
-                <textarea id="message" rows="6" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Tell us about your inquiry..."></textarea>
+                <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-amber-500" placeholder="Tell us about your inquiry..." required></textarea>
               </div>
               
               <div>
                 <button type="submit" class="submit-btn w-full py-3 rounded-lg text-white font-semibold text-lg">
                   Send Message <i class="fas fa-paper-plane ml-2"></i>
                 </button>
+              </div>
+              
+              <!-- Success message -->
+              <div id="success" class="success-message">
+                <i class="fas fa-check-circle mr-2"></i> Thank you for your message! We'll get back to you soon.
               </div>
             </form>
           </div>
@@ -368,66 +388,75 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-amber-900 text-white py-12">
+ <!-- Footer -->
+  <footer class="bg-amber-900 text-white pt-12 pb-8">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div>
-          <h3 class="text-xl font-bold mb-4">Dinajpur Handicraft's BD</h3>
-          <p class="text-amber-200 mb-4">Preserving tradition through handmade creations</p>
+          <h3 class="text-xl font-bold mb-4">Dinajpur Handicrafts BD</h3>
+          <p class="text-amber-200 mb-4">
+            Preserving traditional craftsmanship while creating beautiful, sustainable products for modern living.
+          </p>
           <div class="flex space-x-4">
-            <a href="#" class="text-amber-200 hover:text-white">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="text-amber-200 hover:text-white">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-amber-200 hover:text-white">
-              <i class="fab fa-pinterest"></i>
-            </a>
-            <a href="#" class="text-amber-200 hover:text-white">
-              <i class="fab fa-youtube"></i>
+           <a href="https://www.facebook.com/profile.php?id=61578729983519" class="text-amber-200 hover:text-white text-xl" target="_blank">
+  <i class="fab fa-facebook"></i>
+</a>
+
+          
+            <a href="https://wa.me/8801341396299" class="text-amber-200 hover:text-white text-xl">
+              <i class="fab fa-whatsapp"></i>
             </a>
           </div>
         </div>
         
         <div>
-          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <h4 class="text-lg font-semibold mb-4">Our Products</h4>
           <ul class="space-y-2">
-            <li><a href="index.html" class="text-amber-200 hover:text-white">Home</a></li>
-            <li><a href="products.html" class="text-amber-200 hover:text-white">Products</a></li>
+            <li><a href="products.html?material=bamboo" class="text-amber-200 hover:text-white">Bamboo Collection</a></li>
+            <li><a href="products.html?material=jute" class="text-amber-200 hover:text-white">Jute Collection</a></li>
+            <li><a href="products.html?material=gypsum" class="text-amber-200 hover:text-white">Gypsum Collection</a></li>
+            <li><a href="products.html?material=macrame" class="text-amber-200 hover:text-white">Macrame Collection</a></li>
+            <li><a href="products.html" class="text-amber-200 hover:text-white">All Products</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Information</h4>
+          <ul class="space-y-2">
             <li><a href="about.html" class="text-amber-200 hover:text-white">About Us</a></li>
-            <li><a href="gallery.html" class="text-amber-200 hover:text-white">Gallery</a></li>
-            <li><a href="contact.html" class="text-amber-200 hover:text-white">Contact</a></li>
+            <li><a href="gallery.html" class="text-amber-200 hover:text-white">Our Gallery</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Wholesale Program</a></li>
+            <li><a href="#" class="text-amber-200 hover:text-white">Sustainability</a></li>
+            <li><a href="contact.html" class="text-amber-200 hover:text-white">Contact Us</a></li>
           </ul>
         </div>
         
         <div>
-          <h4 class="text-lg font-semibold mb-4">Customer Care</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-amber-200 hover:text-white">Shipping Policy</a></li>
-            <li><a href="#" class="text-amber-200 hover:text-white">Returns & Exchanges</a></li>
-            <li><a href="#" class="text-amber-200 hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" class="text-amber-200 hover:text-white">Terms & Conditions</a></li>
-            <li><a href="#" class="text-amber-200 hover:text-white">FAQ</a></li>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3 text-amber-200">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>Balubari, Dinajpur, Bangladesh</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone mt-1 mr-3"></i>
+              <span>+880 1341 396299</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3"></i>
+              <span>dinajpurhandicrafts@gmail.com</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fab fa-whatsapp mt-1 mr-3"></i>
+              <span>+880 1341 396299</span>
+            </li>
           </ul>
-        </div>
-        
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-          <p class="text-amber-200 mb-4">Subscribe to get updates on new products and special offers</p>
-          <form class="flex">
-            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l text-gray-800 focus:outline-none">
-            <button class="bg-amber-700 hover:bg-amber-600 px-4 rounded-r">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
         </div>
       </div>
       
-      <div class="border-t border-amber-800 mt-12 pt-8 text-center text-sm">
-        <p>&copy; 2023 Dinajpur Handicraft's BD. All rights reserved.</p>
-        <p class="mt-2">Handcrafted with <i class="fas fa-heart text-red-500"></i> in Bangladesh</p>
+      <div class="border-t border-amber-800 pt-8 text-center text-sm">
+        <p>&copy; 2025 Dinajpur Handicrafts BD. All rights reserved.</p>
+         <p class="mt-2">Handcrafted with <i class="fas fa-heart text-red-500"></i> in Bangladesh</p>
       </div>
     </div>
   </footer>
@@ -460,15 +489,33 @@
       });
     });
     
-    // Form submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
-      });
-    }
+    // Form submission handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success message
+      document.getElementById('success').style.display = 'block';
+      
+      // Scroll to success message
+      document.getElementById('success').scrollIntoView({behavior: 'smooth'});
+      
+      // Reset form after 1 second
+      setTimeout(() => {
+        this.reset();
+      }, 1000);
+      
+      // Actually submit the form in the background
+      setTimeout(() => {
+        const formData = new FormData(this);
+        fetch(this.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+      }, 500);
+    });
   </script>
 </body>
 </html>
